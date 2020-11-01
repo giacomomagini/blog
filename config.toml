@@ -1,0 +1,34 @@
+baseURL = "https://www.giac.cc/"
+languageCode = "en-us"
+title = "giac.cc"
+theme = "archie"
+copyright = "Giacomo Magini - software development blog"
+
+pygmentsstyle = "monokai"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+paginate=5 # articles per page
+
+[params]
+        mode = "auto"
+
+[[params.social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/giacomomagini"
+
+[[params.social]]
+name = "Twitter"
+icon = "twitter"
+url = "https://twitter.com/GiacomoMagini"
+
+[[params.social]]
+name = "LinkedIn"
+icon = "linkedin"
+url = "https://www.linkedin.com/in/giacomo-magini-03356163/"
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 2
