@@ -262,11 +262,11 @@ As simple as...
 import { Dog } from "./dog";
 import { mapper } from "./mapper";
 
-mapper.delete(updateDog, Object.assing(new Dog(), { id: "<uuid>" }));
+mapper.delete(updateDog, Object.assign(new Dog(), { id: "<uuid>" }));
 
 ```
 
-NOTE: I've avoided using this shorter pattern to assign attribute value to mapper instance (`Dog`) cause it could lead to security issues or mere mistakes. The second parameter of the **Object.assing** at runtime could contain everything no matter the type, therefore we could accidentally update a record instead of creating a new one if your object contains a property `id`. Long story short, be mindful when using **Object.assing**!
+NOTE: I've avoided using this shorter pattern to assign attribute value to mapper instance (`Dog`) cause it could lead to security issues or mere mistakes. The second parameter of the **Object.assign** at runtime could contain everything no matter the type, therefore we could accidentally update a record instead of creating a new one if your object contains a property `id`. Long story short, be mindful when using **Object.assign**!
 
 ### Types
 
