@@ -11,17 +11,17 @@ tags: [grpc, backend, protobuf, typescript, nodejs]
 
 ### Reflection vs static code
 
-Thanks to **protocol buffers,** messages sent through gRPC services are defined into a schema (.proto file). This means we can generate the code to scaffold both server and client as we know the shape of the information flowing through the system and which are the procedures exposed by any service.
+Thanks to **protocol buffers**, messages sent through gRPC services are defined into a schema (.proto file). This means we can generate the code to scaffold both server and client as we know the shape of the information flowing through the system and all the procedures exposed by the declared services.
 
 For interpreted languages, like JavaScript, there are two approaches for the generated code by protocol buffers: reflection and static code.
 
 1. **reflection**: in this case we generate the necessary functions and classes runtime when your code gets executed. Once your service stops, this code doesn't exist anymore, it was only in memory. The advantage of this option is the speed, you just need the `.proto` file in the filesystem of your program and execute the right lines of code.
-2. **static code**: in this case, we generate actual code into files. The generation tool is the protocol buffers' command `protoc` which can generate code for any of the main languages. Once the code it's generated you use start to use it as any other code or pack it and distribute it. The advantage of this approach is the decoupling from the `.proto` file which is not code, the fact we can distribute the code as a library and the control we have on the generated code as we can version it each time we run `protoc` and keep an eye on it.
+2. **static code**: in this case, we generate actual code into files. The generation tool is the protocol buffers' command `protoc` which can generate code for any of the main languages. Once the code it's generated you use start to use it as any other code or pack it and distribute it. The advantages of this approach are: decoupling by the `.proto` file which is not code, the fact we can distribute the code as a library and the control we have on the generated code with versioning tools.
 
 ### Static code
 
 There are several reasons why I prefer the static code vs reflection but the biggest one here is generating TS types declaration along with the JS files.
-This is possible to a `protoc` plugin called [grpc_tools_node_protoc_ts](https://github.com/agreatfool/grpc_tools_node_protoc_ts).
+To achieve this, we use a `protoc`'s plugin called [grpc_tools_node_protoc_ts](https://github.com/agreatfool/grpc_tools_node_protoc_ts).
 
 ## Let's do it
 
