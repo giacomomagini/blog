@@ -2,6 +2,7 @@
 title: "gRPC Server and Client examples with Typescript (static generated code)"
 date: 2021-03-04T12:53:37+01:00
 draft: false
+tags: [grpc, backend, protobuf, typescript, nodejs]
 ---
 
 ## gRPC and Protobuf
